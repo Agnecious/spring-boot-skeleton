@@ -1,2 +1,2 @@
 # spring-boot-skeleton
-# This is just a simple spring boot application no impl
+This is just a simple spring boot application no impl

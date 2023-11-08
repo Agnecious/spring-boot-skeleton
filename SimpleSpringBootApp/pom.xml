@@ -16,7 +16,6 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>8</java.version>
-                <fabric8.generator.from>registry.redhat.io/openjdk/openjdk-8-rhel8:latest</fabric8.generator.from>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -70,13 +69,13 @@
     </repository>
   </repositories>
 
-  <pluginRepositories>
+<!--   <pluginRepositories>
     <pluginRepository>
       <id>redhat-ga</id>
       <name>Red Hat GA Repository</name>
       <url>https://maven.repository.redhat.com/ga/</url>
     </pluginRepository>
-  </pluginRepositories>
+  </pluginRepositories> -->
 <!-- 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
@@ -130,7 +129,7 @@
 					</execution>
 				</executions>
 			</plugin>
-          <plugin>
+<!--           <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
             <version>0.21.0</version>
@@ -142,7 +141,7 @@
                 </goals>
               </execution>
             </executions>
-          </plugin>
+          </plugin> -->
         </plugins>
       </build>
     </profile>

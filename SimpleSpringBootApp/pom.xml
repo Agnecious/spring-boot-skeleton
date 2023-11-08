@@ -61,13 +61,13 @@
 
 	
   <!-- Specify the repositories containing Spring Boot artifacts -->
-  <repositories>
+<!--   <repositories>
     <repository>
       <id>redhat-ga</id>
       <name>Red Hat GA Repository</name>
       <url>https://maven.repository.redhat.com/ga/</url>
     </repository>
-  </repositories>
+  </repositories> -->
 
 <!--   <pluginRepositories>
     <pluginRepository>

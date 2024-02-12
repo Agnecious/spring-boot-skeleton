@@ -24,7 +24,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @Value("openshift.secret")
+    @Value("${openshift.secret}")
     private String valueFromOpenshift;
 
     @PostMapping("/register")
@@ -38,7 +38,7 @@ public class StudentController {
     @GetMapping("/test")
     public String testApi() {
         log.info("Request received from the client..");
-        log.info("Openshift secret value extracted: ", valueFromOpenshift);
+        log.info("Openshift secret value extracted: "+valueFromOpenshift);
         return "Success";
     }
 

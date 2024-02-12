@@ -5,6 +5,7 @@ import com.example.SimpleSpringBootApp.demo.model.StudentTbl;
 import com.example.SimpleSpringBootApp.demo.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,6 +24,9 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @Value("openshift.secret")
+    private String valueFromOpenshift;
+
     @PostMapping("/register")
     public ResponseEntity<String> saveStudent(@RequestBody Student student) {
         studentService.registerStudent(student);
@@ -34,6 +38,7 @@ public class StudentController {
     @GetMapping("/test")
     public String testApi() {
         log.info("Request received from the client..");
+        log.info("Openshift secret value extracted: ", valueFromOpenshift);
         return "Success";
     }
 

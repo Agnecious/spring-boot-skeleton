@@ -2,6 +2,11 @@ package com.example.SimpleSpringBootApp.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import java.net.UnknownHostException;
+
 
 @SpringBootApplication
 public class SimpleSpringBootAppApplication {
@@ -14,7 +19,7 @@ public class SimpleSpringBootAppApplication {
 		public static void connectAndCreateQueue() throws UnknownHostException {
 		
 		String rabbitHost =  "rabbitmq-test-d0400.apps.eu46r.prod.ole.redhat.com";
-		int rabbitPort = 80;
+		int rabbitPort = 5672;
 
 		String rabbitUserName = "guest";
 		String rabbitPassword = "guest";

@@ -1,4 +1,4 @@
-package com.example.SimpleSpringBootApp.demo;
+172.30.159.59package com.example.SimpleSpringBootApp.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,7 +21,7 @@ public class SimpleSpringBootAppApplication {
 
 		public static void connectAndCreateQueue() throws UnknownHostException {
 		
-		String rabbitHost =  "rabbitmq-test-d0400.apps.eu46r.prod.ole.redhat.com";
+		String rabbitHost =  "172.30.159.59";
 		int rabbitPort = 5672;
 
 		String rabbitUserName = "guest";

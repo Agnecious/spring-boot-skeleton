@@ -13,8 +13,8 @@ public class SimpleSpringBootAppApplication {
 
 		public static void connectAndCreateQueue() throws UnknownHostException {
 		
-		String rabbitHost =  "openshift-rabbitmq-test-d0400.apps.eu46r.prod.ole.redhat.com";
-		int rabbitPort = 443;
+		String rabbitHost =  "172.30.4.183";
+		int rabbitPort = 5672;
 
 		String rabbitUserName = "guest";
 		String rabbitPassword = "guest";

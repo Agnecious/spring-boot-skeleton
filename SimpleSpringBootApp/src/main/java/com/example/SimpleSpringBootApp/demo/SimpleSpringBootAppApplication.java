@@ -6,10 +6,13 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import java.net.UnknownHostException;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @SpringBootApplication
 public class SimpleSpringBootAppApplication {
+
+	private static Logger log = LoggerFactory.getLogger(SpringBootRestApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleSpringBootAppApplication.class, args);

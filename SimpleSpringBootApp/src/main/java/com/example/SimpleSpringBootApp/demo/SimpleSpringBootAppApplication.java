@@ -14,7 +14,7 @@ public class SimpleSpringBootAppApplication {
 
 	private static Logger log = LoggerFactory.getLogger(SimpleSpringBootAppApplication.class);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnknownHostException {
 		SpringApplication.run(SimpleSpringBootAppApplication.class, args);
 		connectAndCreateQueue();
 	}

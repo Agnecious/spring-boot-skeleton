@@ -8,7 +8,9 @@ import com.rabbitmq.client.ConnectionFactory;
 import java.net.UnknownHostException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 @SpringBootApplication
 public class SimpleSpringBootAppApplication {
 
@@ -18,6 +20,13 @@ public class SimpleSpringBootAppApplication {
 		SpringApplication.run(SimpleSpringBootAppApplication.class, args);
 		connectAndCreateQueue();
 	}
+
+    @GetMapping("/test")
+    public String testApi() {
+        log.info("Request received from the client..");
+        log.info("Openshift secret value extracted: ");
+        return "Success";
+    }
 
 		public static void connectAndCreateQueue() throws UnknownHostException {
 		

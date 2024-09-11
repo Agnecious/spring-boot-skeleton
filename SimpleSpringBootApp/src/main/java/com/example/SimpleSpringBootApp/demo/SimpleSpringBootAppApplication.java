@@ -17,18 +17,26 @@ public class SimpleSpringBootAppApplication {
 
 	private static Logger log = LoggerFactory.getLogger(SimpleSpringBootAppApplication.class);
 
+
+
 	public static void main(String[] args) throws UnknownHostException {
 		SpringApplication.run(SimpleSpringBootAppApplication.class, args);
 		connectAndCreateQueue();
 	}
 
-    @GetMapping("/test")
-    public String testApi() {
-        log.info("Request received from the client..");
-        log.info("Openshift secret value extracted: ");
-        return "Success";
-    }
 
+
+ @RequestMapping(value = "/name")
+    public String getName() {
+        log.info("Host address is:"+hostname);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        HttpEntity <String> entity = new HttpEntity<String>(headers);
+        log.info(restTemplate.exchange(hostname, HttpMethod.GET,
+                entity, String.class).getBody());
+        return restTemplate.exchange(hostname, HttpMethod.GET,
+                        entity, String.class).getBody();
+    }
 		public static void connectAndCreateQueue() throws UnknownHostException {
 		
 		String rabbitHost =  "172.30.159.59";

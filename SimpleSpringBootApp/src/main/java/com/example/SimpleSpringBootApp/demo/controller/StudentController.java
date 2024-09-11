@@ -43,7 +43,7 @@ public class StudentController {
     }
 
     @GetMapping("/test2")
-    public String testApi() {
+    public String testApi2() {
         log.info("Request received from the client..[LOCAL]");
         return "I AM TEST 2";
     }

@@ -42,6 +42,11 @@ public class StudentController {
         return "Success";
     }
 
+    @GetMapping("/test2")
+    public String testApi() {
+        log.info("Request received from the client..[LOCAL]");
+        return "I AM TEST 2";
+    }
     @GetMapping("/retrieveAllStudents")
     public Iterable<StudentTbl> retrieveAllStudents() {
         return studentService.retrieveAllStudents();

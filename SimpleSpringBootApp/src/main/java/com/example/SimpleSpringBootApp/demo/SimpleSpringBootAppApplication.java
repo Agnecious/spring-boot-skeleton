@@ -32,7 +32,7 @@ public class SimpleSpringBootAppApplication {
 
 		String rabbitUserName = "guest";
 		String rabbitPassword = "guest";
-		String queueName = "TEST_001";
+		String queueName = "TEST_001_MATHEMA";
 		ConnectionFactory factory = new ConnectionFactory();
 		factory.setHost(rabbitHost);
 		factory.setPort(rabbitPort);

@@ -27,8 +27,8 @@ public class SimpleSpringBootAppApplication {
 
 		public static void connectAndCreateQueue() throws UnknownHostException {
 		
-		String rabbitHost =  "172.30.159.59";
-		int rabbitPort = 5672;
+		String rabbitHost =  "10.0.2.77";
+		int rabbitPort = 30080;
 
 		String rabbitUserName = "guest";
 		String rabbitPassword = "guest";
